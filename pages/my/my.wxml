@@ -1,6 +1,82 @@
-<!--logs.wxml-->
-<view class="container log-list">
-  <block wx:for="{{logs}}" wx:for-item="log">
-    <text class="log-item">{{index + 1}}. {{log}}</text>
-  </block>
+<!--pages/personCenter/personCenter.wxml-->
+<view class="my-wrap">
+    <!--头部背景-->
+    <view class="containter-top">
+        <view class="userinfo">
+            <image class="userinfo-avatar" src="{{ userInfo.head || '/img/index/user.png'}}" background-size="cover"></image>
+            <view>
+                <text class="userinfo-nickname">crisBai</text>
+            </view>
+        </view>
+    </view>
+
+    <!--内容-->
+    <view class="containter-middle">
+        <view class="content-wrap">
+            <view class="btns-wrap">
+                <view class="btn-item" bindtap="jumpTo" id="1">
+                    <image src="../../img/my/icon_self.png"/>
+                    <text>个人资料</text>
+                </view>
+                <view class="btn-item" bindtap="jumpTo" id="2">
+                    <image src="../../img/my/icon_info.png"/>
+                    <text>修改密码</text>
+                </view>
+            </view>
+
+            <view class="list-wrap">
+                <view class="list-item">
+                    <image src="../../img/my/about.png"/>
+                    <text>账号</text>
+                    <view class="switch">
+                        <text>xiaobai</text>
+                    </view>
+                </view>
+                <view class="list-item">
+                    <image src="../../img/my/file.png"/>
+                    <text>姓名</text>
+                    <view class="switch">
+                        <text>小白</text>
+                    </view>
+                </view>
+                <view class="list-item" bindtap="toAboutUs">
+                    <image src="../../img/my/about.png"/>
+                    <text>电话</text>
+                    <view class="switch">
+                        <text>13980312603</text>
+                    </view>
+                </view>
+                <view class="list-item">
+                    <image src="../../img/my/file.png"/>
+                    <text>角色</text>
+                    <view class="switch">
+                        <text>库管</text>
+                    </view>
+                </view>
+                <view class="list-item" bindtap="toAboutUs">
+                    <image src="../../img/my/about.png"/>
+                    <text>所属仓库</text>
+                    <view class="switch">
+                        <text>新城时代项目仓</text>
+                    </view>
+                </view>
+            </view>
+
+            <view class="exit-wrap">
+                <text bindtap="exit">退出登录</text>
+            </view>
+        </view>
+    </view>
+
+    <!--退出登录弹框 use-slot:是否使用自定义内容的插槽-->
+    <van-dialog use-slot
+                class="exit-modal"
+                title="登录或注册淘职馆"
+                show="{{ exitVisible }}"
+                showConfirmButton="{{false}}"
+                showCancelButton="{{false}}"
+    >
+        <button class="wx-login-btn" bindtap="toLogin" data-type="wx-login">微信账号快速登录</button>
+        <button class="phone-login-btn" bindtap="toLogin" data-type="phone-login">手机号登录</button>
+    </van-dialog>
 </view>

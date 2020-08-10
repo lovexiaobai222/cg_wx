@@ -1,8 +1,131 @@
-.log-list {
-  display: flex;
-  flex-direction: column;
-  padding: 40rpx;
+.my-wrap{
+    height: 100%;
+    background: #fff;
 }
-.log-item {
-  margin: 10rpx;
+.containter-top{
+    height:282rpx;
+    background:linear-gradient(212deg,rgba(107,103,246,1) 0%, rgba(68,171,237,1) 100%);
+}
+.userinfo {
+    width: 750rpx;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    padding-top: 20rpx;
+}
+.userinfo-avatar {
+    width: 160rpx;
+    height: 160rpx;
+    border: 1rpx solid #fff;
+    border-radius: 50%;
+    margin: 0 30rpx;
+}
+.userinfo-nickname {
+    display: block;
+    font-weight: bold;
+}
+
+
+.containter-middle{
+    position: absolute;
+    top: 200rpx;
+    width:100%;
+}
+.content-wrap{
+    margin:0 auto;
+    width:700rpx;
+    background:#fff;
+    border-top-left-radius:24rpx;
+    border-top-right-radius:24rpx;
+}
+/*页面跳转按钮*/
+.btns-wrap{
+    display: flex;
+    height: 200rpx;
+    border-radius: 24rpx;
+    box-shadow:0px 2px 8px 0px rgba(230,235,251,1);
+}
+.btn-item{
+    flex: 1;
+    color: #7d7e80;
+    font-size: 28rpx;
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items:center;
+}
+.btn-item image{
+    width: 60rpx;
+    height: 60rpx;
+    margin-bottom: 25rpx;
+    margin-top: 20rpx
+}
+.btn-item text{
+  margin-bottom: 40rpx;
+}
+
+/* 列表项 */
+.list-wrap{
+    margin-top: 20rpx;
+}
+.list-item{
+    height: 120rpx;
+    display: flex;
+    align-items:center;
+    border-bottom: 1rpx solid #eaeaea;
+}
+.list-item image{
+    width: 36rpx;
+    height: 36rpx;
+    margin-right: 20rpx;
+}
+.list-item text{
+    flex: 1;
+    font-size: 32rpx;
+}
+.list-item .switch{
+    color: #666;
+    width:240rpx;
+    text-align: right;
+}
+.list-item .switch .arrow{
+    color:#dcdcdc;
+}
+
+/*退出登录按钮*/
+.exit-wrap{
+    height: 100rpx;
+    color: #999999;
+    font-size: 32rpx;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+}
+/*退出登录弹框*/
+.exit-modal .van-popup--center{
+    width: 575rpx;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 20rpx;
+}
+.exit-modal .van-dialog__header{
+    font-size: 34rpx;
+    font-weight: bold;
+    padding: 30rpx 0;
+}
+button{
+    width: 380rpx;
+    height:80rpx;
+    line-height: 80rpx;
+    font-size: 28rpx;
+    border-radius: 10rpx;
+}
+button.wx-login-btn{
+    color: #fff;
+    background: #09BF62;
+    margin-bottom: 28rpx;
+}
+button.phone-login-btn{
+    margin-bottom: 35rpx;
 }

@@ -1,0 +1,11 @@
+@import "../apply/apply.wxss";
+
+.cg-apply-wrap{
+  background-color: pink;
+  display: block;
+}
+
+.footer-btn {
+  width: 100% !important;
+  margin: 0 0 !important;
+}

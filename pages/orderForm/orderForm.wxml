@@ -1,0 +1,82 @@
+<view>
+  <view class="cg-apply-form">
+    <view>
+      <form class="common-form" report-submit="false" bindsubmit="" bindreset="">
+        <view class="form-item">
+          <view class="label">编号：</view>
+          <view class="value">A12342345</view>
+        </view>
+        <view class="form-item">
+          <view class="label">申请人：</view>
+          <view class="value">dfvgsvdf</view>
+        </view>
+        <view class="form-item">
+          <view class="label">申请时间：</view>
+          <view class="value">2020-12-17 23:21</view>
+        </view>
+        <view class="form-item">
+          <view class="label">仓库：</view>
+          <view class="value my-select" bindtap="changePopVisible" id="store">{{applyForm.storeName}}<van-icon name="arrow-down" class="my-select-arrow"/></view>
+        </view>
+        <view class="form-item">
+          <view class="label">申请物料：</view>
+          <van-icon class="value add-btn" name="plus" bindtap="showDialog" />
+        </view>
+      </form>
+      <!-- table列表 -->
+      <view class="table">
+        <view class="tr bg-w">
+          <view class="th">物料名</view>
+          <view class="th ">规格</view>
+          <view class="th ">单位</view>
+          <view class="th ">数量</view>
+          <view class="th ">操作</view>
+        </view>
+        <block wx:for="{{applyForm.productList}}" wx:key="productId">
+          <view class="tr">
+            <view class="td">{{item.productName}}</view>
+            <view class="td">{{item.spec}}</view>
+            <view class="td">{{item.unit}}</view>
+            <view class="td">{{item.amount}}</view>
+            <view class="td">
+              <text class="del-btn" bindtap="deleteProduct" id="{{item.productId}}">删除</text>
+            </view>
+          </view>
+        </block>
+      </view>
+    </view>
+
+    <button class="fixed-bottom-btn footer-btn" bindtap="submitForm">提交</button>
+  </view>
+
+  <!-- 添加采购物料弹框 -->
+  <wux-popup closable maskClosable="{{false}}" visible="{{ dialogVisible }}" title="添加采购物料" bind:close="onClose"
+    wux-header-class="dialog-header" wux-body-class="dialog-content">
+    <form class="common-form">
+      <view class="form-item">
+        <view class="label">选择物料：</view>
+        <view class="value my-select" bindtap="changePopVisible" id="product">{{dialogForm.productName}}<van-icon name="arrow-down" class="my-select-arrow"/></view>
+      </view>
+      <view class="form-item">
+        <view class="label">数量：</view>
+        <view class="weui-cell weui-cell_input">
+          <input class="weui-input my-input" maxlength="10" placeholder="请输入数量" value="{{dialogForm.amount}}" bindinput="onInputChange"/>
+        </view>
+      </view>
+    </form>
+    <button class="dialog-add-btn" bindtap="addRecord">添加</button>
+  </wux-popup>
+
+  <!--选项弹框-->
+  <van-popup show="{{ popVisible }}" position="bottom" z-index="{{9999}}">
+      <!--选择物料-->
+      <van-picker show-toolbar
+                  columns="{{ selectType==='product'?productList:selectType==='store'?storeList:[] }}"
+                  bind:cancel="changePopVisible"
+                  bind:confirm="onChange"
+      />
+  </van-popup>
+
+
+
+</view>

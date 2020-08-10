@@ -1,0 +1,10 @@
+{
+  "component": true,
+  "usingComponents": {
+    "wux-popup": "/wux-weapp-master/dist/popup/index",
+    "van-popup": "/vant-weapp/dist/popup/index",
+    "van-picker": "/vant-weapp/dist/picker/index",
+    "van-icon": "/vant-weapp/dist/icon/index"
+  },
+  "navigationBarTitleText": "采购申请"
+}

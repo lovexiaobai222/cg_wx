@@ -17,7 +17,7 @@
                     <view class="foot">
                       <view class="user">{{item.username}}</view>
                       <view class="time">{{util.formatTime(item.createTime)}}</view>
-                      <view class="status">{{['','已提交','已确认','已退回'][item.purchaseState]}}</view>
+                      <view class="status">{{util.applyStatus[item.purchaseState]}}</view>
                     </view>
                   </view>
                   <view>

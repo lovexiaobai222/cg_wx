@@ -4,7 +4,7 @@ const api = require('../../utils/api.js')
 import { $startWuxRefresher, $stopWuxRefresher, $stopWuxLoader } from '../../wux-weapp-master/dist/index'
 
 /**
- * @Discription 采购申请
+ * @Discription 采购订单
  * @author xujing
  * @created 2020/8/9 17:48
  */
@@ -36,12 +36,12 @@ Page({
       //请求下一页数据列表
       var params = {
         companyid: 6,
-        purchasetype: 41,
+        purchasetype: 42,//采购订单类型（42）
         pageNo: this.data.meta.pageNo + 1,
         pageize: 10
       }
       // 发起请求
-      api.listbycompany(params)
+      api.pradminlistbycompany(params)
         .then(res => {
           const { entities, pageNo, pageSize, totalPage, totalCount } = res.content
           const meta = {
@@ -87,12 +87,12 @@ Page({
     //刷新请求第一页
     var params = {
       companyid: 6,
-      purchasetype: 41,
+      purchasetype: 42,//采购订单类型（42）
       pageNo: 1,
       pageSize: 10
     }
     // 发起请求
-    api.listbycompany(params)
+    api.pradminlistbycompany(params)
       .then(res => {
         // 停止当前下拉刷新
         $stopWuxRefresher()
@@ -104,6 +104,7 @@ Page({
           totalPage,
           totalCount
         }
+        console.log(entities,"------entities")
 
         _this.setData({
           meta: meta,
@@ -120,12 +121,12 @@ Page({
     const item = e.currentTarget.dataset.item
     //跳转详情页面
     wx.navigateTo({
-      url: '/pages/applyDetail/index?item=' + JSON.stringify(item)
+      url: '/pages/orderDetail/index?item=' + JSON.stringify(item)
     })
   },
   goToForm(){
     wx.navigateTo({
-      url: '/pages/cgApplyForm/cgApplyForm'
+      url: '/pages/orderForm/orderForm'
     })
   }
 })

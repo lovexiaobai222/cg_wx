@@ -36,7 +36,7 @@
 .common-form .form-item {
   display: flex;
   align-items: center;
-  padding: 8rpx 10rpx;
+  padding: 12rpx 10rpx;
 }
 .common-form .form-item .label{
   width:40%;

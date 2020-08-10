@@ -1,12 +1,15 @@
 {
   "pages": [
-    "pages/cgApplyForm/cgApplyForm",
+    "pages/my/my",
 
-    "pages/cgApply/cgApply",
+    "pages/order/order",
+    "pages/orderDetail/index",
+    "pages/orderForm/orderForm",
+
+
+    "pages/apply/apply",
     "pages/applyDetail/index",
-
-    "pages/cgOrder/cgOrder",
-    "pages/my/my"
+    "pages/applyForm/applyForm"
   ],
   "tabBar": {
     "color": "#999999",
@@ -14,13 +17,13 @@
     "backgroundColor": "#fff",
     "list": [
       {
-        "pagePath": "pages/cgApply/cgApply",
+        "pagePath": "pages/apply/apply",
         "text": "采购申请",
         "iconPath": "img/index/index_normal.png",
         "selectedIconPath": "img/index/index_select.png"
       },
       {
-        "pagePath": "pages/cgOrder/cgOrder",
+        "pagePath": "pages/order/order",
         "text": "采购订单",
         "iconPath": "img/index/message_normal.png",
         "selectedIconPath": "img/index/message_select.png"

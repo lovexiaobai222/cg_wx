@@ -30,6 +30,20 @@ var fixz = function (num) {
     return num
 }
 
+var applyStatus={
+    "1":"已提交",
+    "2":"已确认",
+    "3":"已退回",
+}
+var orderStatus={
+    "10":"已提交",
+    "20":"已确认",
+    "30":"已退回",
+    "40":"已提交",
+}
+
 module.exports = {
-    formatTime: formatTime
+    formatTime: formatTime,
+    applyStatus: applyStatus,
+    orderStatus: orderStatus,
 }

@@ -18,7 +18,11 @@ var obj = {
   AUTH_BASEINFO: "/wx/auth/baseInfo", // 完善基本信息
   AUTH_LOGOUT: "/wx/auth/logout", // 退出登录
 
-  LISTBYCOMPANY: "/pradmin/listbycompany", // 采购申请列表
+  PRADMIN_LISTBYCOMPANY: "/pradmin/listbycompany", // 采购申请列表(purchasetype=41),采购订单列表(purchasetype=42)
+  STORE_LISTBYCOMPANY: "/storeadmin/listbycompany", // 仓库列表
+  PRODUCTADMIN_LISTBYCOMPANY: "/productadmin/listbycompany", // 物料列表
+  SUPPLIERADMIN_LISTBYCOMPANY: "/supplieradmin/listbycompany", // 供应商列表
+  PRADMIN_ADDRECORD: "/pradmin/addrecord", // 新增采购申请
 
 
 }

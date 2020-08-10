@@ -1,0 +1,36 @@
+<wxs src="../../wxs/pageUtil.wxs" module="util" />
+<!-- order.wxml -->
+<view class="cg-apply-wrap">
+  <view class="main" hover-class="none" hover-stop-propagation="false">
+    <view class="top-title">最近采购订单</view>
+    <!-- 滚动刷新采购订单列表 -->
+    <wux-refresher id="wux-refresher" class="refresher-wrap" scrollTop="{{scrollTop}}" bind:pulling="onPulling" bind:refresh="onRefresh" bind:loadmore="onLoadmore" refreshingText="正在刷新首页" pullingText="下拉刷新中..." loadingText="没有更多数据啦" loadNoDataText="没有更多数据啦">
+      <view class="weui-panel weui-panel_access">
+        <view class="weui-panel__bd">
+          <view class="message-wrap">
+            <view class="weui-media-box_text" wx:for="{{ applyList }}" wx:key="index">
+              <view class="apply-item" bindtap="toDetail" data-item="{{item}}">
+                <view class="apply-item-content">
+                  <view>
+                    <view class="title">{{item.recordCode}}</view>
+                    <view class="content">{{item.productInfo}}</view>
+                    <view class="foot">
+                      <view class="user">{{item.username}}</view>
+                      <view class="time">{{util.formatTime(item.createTime)}}</view>
+                      <view class="status">{{util.orderStatus[item.purchaseState]}}</view>
+                    </view>
+                  </view>
+                  <view>
+                    <van-icon name="arrow" class="right-arrow" />
+                  </view>
+                </view>
+                <view class="common-separate"></view>
+              </view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </wux-refresher>
+  </view>
+  <button class="fixed-bottom-btn footer-btn" bindtap="goToForm">发起采购</button>
+</view>

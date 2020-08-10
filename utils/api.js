@@ -26,6 +26,12 @@ module.exports = {
   authBaseinfo: (params) => PostMethod(C.AUTH_BASEINFO, params), // 完善基本信息
   authLogout: (params) => PostMethod(C.AUTH_LOGOUT, params), // 退出登录
 
-  listbycompany: (params) => GetMethod(C.LISTBYCOMPANY, params), //采购申请列表 
+  pradminlistbycompany: (params) => GetMethod(C.PRADMIN_LISTBYCOMPANY, params), //采购申请列表 
+  storeadminlistbycompany: (params) => GetMethod(C.STORE_LISTBYCOMPANY, params), //仓库列表 
+  productadminlistbycompany: (params) => GetMethod(C.PRODUCTADMIN_LISTBYCOMPANY, params), //物料列表 
+  supplieradminlistbycompany: (params) => GetMethod(C.SUPPLIERADMIN_LISTBYCOMPANY, params), //供应商列表
+  pradminaddrecord: (params) => GetMethod(C.PRADMIN_ADDRECORD, params), //新增采购申请
+
+
 
 };

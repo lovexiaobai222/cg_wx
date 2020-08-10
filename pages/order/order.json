@@ -1,9 +1,8 @@
 {
   "component": true,
   "usingComponents": {
-    "van-switch": "/vant-weapp/dist/switch/index",
     "van-icon": "/vant-weapp/dist/icon/index",
-    "van-dialog": "/vant-weapp/dist/dialog/index"
+    "wux-refresher": "/wux-weapp-master/dist/refresher/index"
   },
   "navigationBarTitleText": "采购订单"
 }
