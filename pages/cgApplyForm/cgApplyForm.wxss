@@ -1,0 +1,47 @@
+.cg-apply-form {
+  height: 100vh;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+/* 下拉框 */
+.picker-view {
+  display: flex;
+}
+.picker-view-label {
+  border: 1rpx solid #eaeaea;
+  border-radius: 10rpx;
+  padding: 2rpx 12rpx;
+}
+
+/* 弹框 */
+.add-btn {
+  font-size: 36rpx !important;
+  margin-top: 8rpx;
+}
+.dialog-header{
+  padding-top: 16rpx !important;
+  border-bottom: 1rpx solid #eaeaea;
+}
+.dialog-content{
+  padding: 20rpx 0 !important;
+}
+.dialog-content .form-item{
+  padding: 20rpx 10rpx;
+}
+.dialog-content .input{
+  width: 180rpx;
+  font-size: 28rpx;
+  text-align: left;
+  border: 1rpx solid #eaeaea;
+  border-radius: 10rpx;
+  padding: 2rpx 12rpx;
+}
+.dialog-add-btn{
+  display: flex;
+  justify-content: center;
+  font-size: 32rpx !important;
+  color: #fff;
+  background: linear-gradient(212deg, rgba(107, 103, 246, 1) 0%, rgba(68, 171, 237, 1) 100%);
+}

@@ -1,0 +1,76 @@
+.cg-apply-wrap {
+  height: 100vh;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+.top-title {
+  color: rgba(69, 90, 100, 0.6);
+  /* font-size: 24rpx; */
+  font-weight: bold;
+  text-align: center;
+}
+
+/*刷新列表*/
+
+.refresher-wrap {
+  text-align: center;
+}
+
+.message-wrap {
+  font-size: 36rpx;
+  color: #666;
+  padding: 32rpx;
+}
+
+.common-separate {
+  height: 3rpx;
+  background: #eaeaea;
+  margin: 32rpx 0;
+}
+
+.apply-item-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.apply-item-content .right-arrow {
+  font-size: 60rpx;
+  color: #D8D8D8;
+}
+
+.apply-item .title {
+  text-align: left;
+  color: #000;
+}
+
+.apply-item .content {
+  text-align: left;
+  color: #666;
+  margin: 10rpx 0 20rpx;
+  font-size: 28rpx;
+}
+
+.apply-item .foot {
+  color: #666;
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  font-size: 24rpx;
+}
+
+.apply-item .foot >.time {
+  padding: 0 20rpx;
+  border-right: 1rpx solid #333;
+}
+
+.apply-item .foot >.status {
+  margin-left: 20rpx;
+}
+
+.footer-btn {
+  width: 100% !important;
+  margin: 0 0 !important;
+}

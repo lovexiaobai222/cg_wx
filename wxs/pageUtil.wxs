@@ -1,0 +1,35 @@
+/**
+ * @Discription 页面处理工具函数
+ * WXS增强了wxml的功能，相当于页面中的Js脚本语言
+ * wxs目前似乎并不支持ES6（至少let不能使用）
+ * wxs文件不能被js文件引用，但wxs文件能引用wxs文件。
+ * wxs文件不能new Date(), 而用 getDate()替换
+ * @author 徐静
+ * @created 2019/5/29 22:53
+ */
+
+
+// 在页面中：时间格式化
+var formatTime = function (date) {
+    var date = getDate(date); //返回当前时间对象
+    var year = date.getFullYear()
+    var month = fixz(date.getMonth() + 1)
+    var day = fixz(date.getDate())
+
+    var hour = fixz(date.getHours())
+    var minute = fixz(date.getMinutes())
+    var second = fixz(date.getSeconds())
+
+    return [year, month, day].join("-") + " " + [hour, minute, second].join(":")
+}
+
+var fixz = function (num) {
+    if (num < 10) {
+        return "0" + num
+    }
+    return num
+}
+
+module.exports = {
+    formatTime: formatTime
+}

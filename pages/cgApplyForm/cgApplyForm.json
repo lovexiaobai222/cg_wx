@@ -1,0 +1,9 @@
+{
+  "component": true,
+  "usingComponents": {
+    "van-dialog": "/vant-weapp/dist/dialog/index",
+    "wux-popup": "/wux-weapp-master/dist/popup/index",
+    "van-icon": "/vant-weapp/dist/icon/index"
+  },
+  "navigationBarTitleText": "采购申请"
+}
